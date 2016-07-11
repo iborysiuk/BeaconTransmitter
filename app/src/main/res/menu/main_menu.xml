@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action.menu"
+        android:icon="@drawable/ic_dots_v"
+        android:orderInCategory="100"
+        android:title="@string/menu_main"
+        app:showAsAction="ifRoom">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/action.menu.about"-->
+                <!--android:title="@string/menu_main_about" />-->
+            <item
+                android:id="@+id/action.menu.logout"
+                android:title="@string/menu_main_logout" />
+        </menu>
+    </item>
+
+</menu>
