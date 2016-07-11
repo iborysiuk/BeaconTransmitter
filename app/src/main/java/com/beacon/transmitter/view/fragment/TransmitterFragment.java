@@ -152,7 +152,9 @@ public class TransmitterFragment extends BaseFragment implements CompoundButton.
         if (mBeaconTransmitter != null && mBeaconTransmitter.isStarted()) {
             mBeaconTransmitter.stopAdvertising();
             mBeaconTransmitter = null;
-            showMessage("Advertisement start succeeded");
+            mRadarFab.setImageResource(R.drawable.ic_radar);
+            showMessage("Advertisement stopped");
+            return;
         }
 
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -185,6 +187,7 @@ public class TransmitterFragment extends BaseFragment implements CompoundButton.
                 new AdvertiseCallback() {
                     @Override
                     public void onStartSuccess(AdvertiseSettings settingsInEffect) {
+                        mRadarFab.setImageResource(R.drawable.ic_stop);
                         showMessage("Advertisement start succeeded");
                     }
 

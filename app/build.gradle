@@ -30,7 +30,7 @@ android {
         }
 
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles = buildTypes.debug.proguardFiles
         }
 
